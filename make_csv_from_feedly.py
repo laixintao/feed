@@ -6,12 +6,12 @@ import csv
 
 header = [
     "标题",
-    "feed"
+    "feed",
     "网站主页",
     "描述",
     "feedly 订阅数",
     "标签",
-    "更新频率"
+    "更新频率",
     "分类",
 ]
 
@@ -23,7 +23,7 @@ with open("feeds.csv", "w+") as feeds:
      writer = csv.writer(feeds)
      writer.writerow(header)
      for item in data:
-         feed_url = item['id'][4:]
+         feed_url = item['id'][5:]
          title = item['title']
          subscribers = item['subscribers']
          site = item['website']
