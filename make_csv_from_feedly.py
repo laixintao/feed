@@ -5,14 +5,14 @@ import csv
 
 
 header = [
+    "分类",
+    "更新频率",
     "标题",
     "feed",
     "网站主页",
     "描述",
     "feedly 订阅数",
     "标签",
-    "更新频率",
-    "分类",
 ]
 
 
@@ -32,12 +32,12 @@ with open("feeds.csv", "w+") as feeds:
          topics = item.get('topics')
          weekly = "每周{}篇".format(item['velocity'])
          writer.writerow([
+             categorie,
+             weekly,
              title,
              feed_url,
              site,
              description,
              subscribers,
              topics,
-             weekly,
-             categorie,
         ])
